@@ -1,6 +1,5 @@
 package com.devleonardo.spring_database.service;
 
-import com.devleonardo.spring_database.domain.dto.UserRequest;
 import com.devleonardo.spring_database.domain.entity.UserEntity;
 import com.devleonardo.spring_database.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -8,10 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class userService {
+public class UserService {
 
     @Autowired
     private UserRepository UserRepository;
