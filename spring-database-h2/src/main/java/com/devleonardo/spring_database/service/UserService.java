@@ -1,6 +1,7 @@
 package com.devleonardo.spring_database.service;
 
 import com.devleonardo.spring_database.domain.entity.UserEntity;
+import com.devleonardo.spring_database.exception.UserNotFoundException;
 import com.devleonardo.spring_database.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class UserService {
     }
 
     public UserEntity alterar(long id){
-        UserEntity user =  UserRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
+        UserEntity user =  UserRepository.findById(id).orElseThrow(UserNotFoundException::new);
         return user;
     }
 
