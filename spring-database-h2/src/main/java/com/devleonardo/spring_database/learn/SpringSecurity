@@ -1,0 +1,15 @@
+Um framework do spring
+-Autenticação: Verifique quem é o usuário
+-Autorização: O que esse usuário pode acessar
+-Proteção de ataques comuns
+--> Controla o login, permissões e proteção das rotas da aplicação.
+
+--Exemplos de autenticação (Validar quem é o usuário)
+*Usuário e senha
+*JWT token
+*OAuth2(Google, Github...)
+
+
+-O Spring Security funciona por 'baixo dos panos', através de uma cadeia de filtros
+-->Exemplo funcional ordem:
+    REQUEST -> SECURITY FILTERS -> CONTROLLER
